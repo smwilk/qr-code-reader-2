@@ -31,12 +31,17 @@
     <div id="order-id"></div>
 
     <script>
-        // Extract the order ID from the URL
-        const pathSegments = window.location.pathname.split('/'); // Split the path
-        const orderId = pathSegments[pathSegments.length - 1]; // Get the last segment
+        // Function to get query parameters
+        function getQueryParameter(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
 
-        // Display the order ID
-        document.getElementById('order-id').innerText = "Order ID: " + orderId;
+        // Get the order ID from the query string
+        const orderId = getQueryParameter('id'); // assuming your query parameter is named 'id'
+
+        // Display the order ID or a message if not provided
+        document.getElementById('order-id').innerText = orderId ? "Order ID: " + orderId : "No Order ID provided";
     </script>
 </body>
 
