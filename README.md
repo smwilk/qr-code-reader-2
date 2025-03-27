@@ -1,2 +1,2 @@
 # qr-code-reader-2
-qr code reader
+qr code reader 2
