@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Viewer</title>
+</head>
+
+<body>
+    <h1>Order Viewer</h1>
+    <div id="order-id"></div>
+
+    <script>
+        // Extract the order ID from the URL
+        const orderId = window.location.pathname.split('/').pop();
+        document.getElementById('order-id').innerText = "Order ID: " + orderId;
+    </script>
+</body>
+
+</html>
